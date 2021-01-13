@@ -1,0 +1,90 @@
+$chip-y-spacing: 15px;
+$chip-x-spacing: 4px;
+$chip-button-width: $chip-y-spacing + $chip-x-spacing * 2;
+$chip-border-radius: 15px;
+$chip-background: #0094b6;
+$chip-color: #fff;
+$chip-min-height: 36px;
+.App {
+  // text-align: center;
+  margin: 20px;
+  ul {
+    li {
+      align-items: start;
+    }
+  }
+}
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+.compose-email {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .email-label {
+    line-height: 2.5;
+  }
+  .recipient-input-wrapper {
+    width: 100%;
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
+  }
+
+  .chips {
+    padding-left: 0.5rem;
+    .chips-input {
+      display: inline-block;
+      width: 33%;
+      min-height: $chip-min-height;
+      margin-bottom: $chip-x-spacing;
+      margin-left: $chip-x-spacing * 2;
+      border: 0;
+      outline: none;
+      font-size: 0.9rem;
+      padding-top: 4px;
+      min-width: 250px;
+    }
+
+    .chip {
+      display: inline-block;
+      margin-top: $chip-x-spacing;
+      margin-bottom: $chip-x-spacing;
+      margin-left: $chip-x-spacing;
+      margin-right: 4px;
+      position: relative;
+
+      .chip-value {
+        display: inline-block;
+        padding: $chip-x-spacing;
+        padding-left: $chip-y-spacing;
+        padding-right: $chip-y-spacing;
+        background: $chip-background;
+        color: $chip-color;
+        border-radius: $chip-border-radius 0 0 $chip-border-radius;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        &.chip-totals {
+          border-radius: $chip-border-radius;
+          background: #a2aab7;
+        }
+      }
+
+      .chip-delete-button {
+        background: $chip-background;
+        color: $chip-color;
+        border: 0;
+        border-radius: 0 $chip-border-radius $chip-border-radius 0;
+        padding: $chip-x-spacing $chip-x-spacing * 2;
+        cursor: pointer;
+
+        font-weight: bold;
+      }
+    }
+  }
+}
